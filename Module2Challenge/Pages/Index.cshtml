@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Calculate Miles Per Gallon</h1>
+
+<form method="post">
+
+    <label for="Miles">Miles:</label>
+    <input type="number" name="Miles"/>
+
+    <br />
+    <br />
+
+    <label for="Gallons">Gallons:</label>
+    <input type="number" name="Gallons" />
+
+    <br />
+    <br />
+
+    <button type="submit">Calculate MPG</button>
+
+</form>
+
+<!-- if else statement displays results -->
+
+@if (Model.MPG != 0)
+{
+    <p>Miles Per Gallon: @Model.MPG</p>
+} else {
+    <p>Enter number greater than zero.</p>
+}
+
+
+
+
